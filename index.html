@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Budget App</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <div class="top">
+                <div class="balance">
+                    <span id="bal">Balance</span>
+                    <span id="blc_value"></span>
+
+                    <div class="in_out">
+                        <div id="inc">
+                            <span class="top_title">Income</span>
+                            <span id="inc_bal"></span>
+                        </div>
+
+                        <div id="out">
+                            <span class="top_tittle">Outcome</span>
+                            <span id="out_bal"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="bottom">
+                <div id="operations">
+                    <header>DashBoard</header>
+                    <ul>
+                        <li class="selected" onclick="to_expenses()">Expenses</li>
+                        <li onclick="to_income()">Income</li>
+                        <li onclick="to_all()">All</li>
+                    </ul>
+                </div>
+
+                <div id="items">
+
+                    <div id="expenses">
+                        <ul id="expense_items"> 
+
+                        </ul>
+
+                        <div class="add_item">
+                            <input type="text" placeholder="Item name: " id="expense_item">
+                            <input type="number" placeholder="R$: " id="expense_price">
+                            <button id="btn_add" onclick="create_expense_item()">+</button>
+                        </div>
+                    </div>
+
+
+                    <div id="income">
+                        <ul id="income_items">
+
+
+                        </ul>
+
+                        <div class="add_item">
+                            <input type="text" placeholder="Item name: " id="income_item">
+                            <input type="number" placeholder="R$: " id="income_price">
+                            <button id="btn_add" onclick="create_income_item()" type="button">+</button>
+                        </div>
+                    </div>
+
+                    <div id="all">
+                        <ul id="all_items">
+
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="/script.js"></script>
+    </body>
+</html>
